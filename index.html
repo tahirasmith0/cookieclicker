@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Clicker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Offline Cookie Clicker</title>
 </head>
 <body>
-    <div class="game-container">
-        <h1>Cookie Clicker</h1>
-        <div class="cookie-container">
-            <img id="cookie" src="cookie1.png" alt="Cookie">
-        </div>
-        <p>Cookies: <span id="cookie-count">0</span></p>
-        <p>Clickers: <span id="clicker-count">0</span> (Cost: <span id="clicker-cost">10</span> cookies)</p>
-        <button id="buy-clicker">Buy Clicker</button>
-    </div>
+    <h1>Cookie Clicker</h1>
+    <p>Cookies: <span id="cookie-count">0</span></p>
+    <button id="cookie-button">Click me!</button>
 
-    <script src="script.js"></script>
+    <script src="game.js"></script>
+
+    <script>
+        // Register service worker for offline functionality
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch((error) => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
 </body>
 </html>
