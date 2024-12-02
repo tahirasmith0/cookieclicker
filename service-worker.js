@@ -3,7 +3,7 @@ const urlsToCache = [
     '/',
     '/index.html',
     '/game.js'
-    // Add other files like CSS or images here if needed
+    '/style.css'   // Add other files like CSS or images here if needed
 ];
 
 self.addEventListener('install', (event) => {
