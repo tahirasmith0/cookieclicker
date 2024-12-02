@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline Cookie Clicker</title>
+    <title>Cookie Clicker Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cookie Clicker</h1>
-    <div id="game">
-        <img id="cookie" src="cookie.png" alt="Cookie">
-        <p>Cookies: <span id="score">0</span></p>
+    <div class="container">
+        <h1>Cookie Clicker</h1>
+        <div id="cookie" class="cookie">
+            <img src="cookie.png" alt="Cookie" />
+        </div>
+        <p>Cookies: <span id="cookie-count">0</span></p>
+        <p>Cookies per second: <span id="cookies-per-second">0</span></p>
+        <p>Upgrade: <button id="upgrade-btn">Upgrade (Cost: 50 cookies)</button></p>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
