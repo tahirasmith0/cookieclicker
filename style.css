@@ -1,33 +1,36 @@
 body {
-    text-align: center;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    text-align: center;
     margin: 0;
     padding: 0;
+    background-color: #f0f8ff;
 }
 
-#game {
-    margin: 50px auto;
-    width: fit-content;
-    padding: 20px;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.container {
+    margin-top: 50px;
 }
 
-#cookie {
-    width: 200px;
+.cookie {
     cursor: pointer;
-    transition: transform 0.1s ease-in-out;
+    margin-bottom: 20px;
 }
 
-#cookie:active {
-    transform: scale(0.95);
+.cookie img {
+    width: 200px;
+    height: 200px;
 }
 
-#score {
-    font-size: 2rem;
-    color: #f57c00;
+button {
+    padding: 10px 20px;
+    font-size: 16px;
     margin-top: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background-color: #ccc;
 }
