@@ -27,13 +27,13 @@ body {
 }
 
 img {
-    width: 200px;
+    width: 150px; /* Adjusted cookie size */
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
 img:active {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 button {
@@ -49,6 +49,11 @@ button {
 
 button:hover {
     background-color: #45a049;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
 }
 
 p {
