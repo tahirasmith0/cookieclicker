@@ -15,22 +15,28 @@ if ('serviceWorker' in navigator) {
       console.error('Service Worker registration failed:', error);
    });
 }
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            console.log('Opened cache');
-            return cache.addAll(urlsToCache);
-        })
-    );
+self.addEventListener('install', event => {
+   event.waitUntil(
+      caches.open('my-pwa-cache')
+      .then(cache => {
+         return cache.addAll([
+            '/',
+            '/index.html',
+            '/styles.css',
+            '/game.js',
+            //'/images/logo.png'
+         ]);
+      })
+   );
 });
 
-self.addEventListener('fetch', (event) => {
-    event.respondWith(
-        caches.match(event.request).then((response) => {
-            // Return the cached resource if found, or fetch from the network
-            return response || fetch(event.request);
-        })
-    );
+self.addEventListener('fetch', event => {
+   event.respondWith(
+      caches.match(event.request)
+      .then(response => {
+         return response || fetch(event.request);
+      })
+   );
 });
 
 self.addEventListener('activate', (event) => {
