@@ -10,7 +10,7 @@ const clickerCountDisplay = document.getElementById("clicker-count");
 const clickerCostDisplay = document.getElementById("clicker-cost");
 const buyClickerButton = document.getElementById("buy-clicker");
 
-// Update display
+// Function to update the display and save data
 function updateDisplay() {
     cookieCountDisplay.textContent = cookies;
     clickerCountDisplay.textContent = clickers;
