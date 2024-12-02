@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Clicker Game</title>
+    <title>Cookie Clicker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
         <h1>Cookie Clicker</h1>
         <div class="cookie-container">
-            <button id="cookie-btn" class="cookie-btn">Click me!</button>
+            <img id="cookie" src="cookie1.png" alt="Cookie">
         </div>
         <p>Cookies: <span id="cookie-count">0</span></p>
+        <p>Clickers: <span id="clicker-count">0</span> (Cost: <span id="clicker-cost">10</span> cookies)</p>
+        <button id="buy-clicker">Buy Clicker</button>
     </div>
 
     <script src="script.js"></script>
