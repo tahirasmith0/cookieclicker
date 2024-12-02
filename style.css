@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    margin: 50px auto;
+    width: fit-content;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cookie {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+#cookie:active {
+    transform: scale(0.95);
+}
+
+#score {
+    font-size: 2rem;
+    color: #f57c00;
+    margin-top: 10px;
+}
